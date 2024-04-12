@@ -24,4 +24,11 @@ public abstract class EnemyBaseState : State
 
         stateMachine.transform.rotation = Quaternion.LookRotation(lookPos);
     }
+    protected bool IsInAttackRange()
+    {
+        if (stateMachine.Player.isDead) { return false; }
+
+        var playerDistanceSqr = (stateMachine.Player.transform.position - stateMachine.transform.position).sqrMagnitude;
+        return playerDistanceSqr <= Mathf.Pow(stateMachine.EnemyData.attackRange, 2);
+    }
 }
