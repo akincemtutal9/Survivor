@@ -2191,6 +2191,18 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &452009478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4076041710329624588, guid: 6254c50dde4bac14cb16c67b6caf9654,
+    type: 3}
+  m_PrefabInstance: {fileID: 820502466}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &502516700
 GameObject:
   m_ObjectHideFlags: 0
@@ -8717,6 +8729,7 @@ GameObject:
   - component: {fileID: 1596053071}
   - component: {fileID: 1596053073}
   - component: {fileID: 1596053072}
+  - component: {fileID: 1596053074}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8866,11 +8879,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34f11f086d97adc4681dfab924a1bc59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  isInvunerable: 0
   playerSO: {fileID: 11400000, guid: 30577df862513b0449192f7565e3d774, type: 2}
   healthBar: {fileID: 1956773825}
   healthText: {fileID: 1225975972}
   playerDamagedMaterial: {fileID: 2100000, guid: a4b62a69d54e80347bd546999c6d4b9e,
     type: 2}
+--- !u!114 &1596053074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596053066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9848b038ade1e54285373b95006b4d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1602142435
 GameObject:
   m_ObjectHideFlags: 0
@@ -9174,6 +9202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e927be5176d25d9408643e16d224cde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  isInvunerable: 0
   enemySO: {fileID: 11400000, guid: f2ea16bf1b3da344aab30c6925e9871c, type: 2}
 --- !u!114 &1702222587
 MonoBehaviour:
@@ -9194,6 +9225,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 1702222589}
   <Controller>k__BackingField: {fileID: 1702222591}
   <ForceReceiver>k__BackingField: {fileID: 1702222590}
+  <HealthBar>k__BackingField: {fileID: 452009478}
 --- !u!114 &1702222588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11083,6 +11115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e927be5176d25d9408643e16d224cde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  health: 0
+  isInvunerable: 0
   enemySO: {fileID: 11400000, guid: f2ea16bf1b3da344aab30c6925e9871c, type: 2}
 --- !u!1001 &1297082537413642431
 PrefabInstance:
@@ -11341,6 +11376,7 @@ MonoBehaviour:
   <Agent>k__BackingField: {fileID: 8731940726913429118}
   <Controller>k__BackingField: {fileID: 375562412081584525}
   <ForceReceiver>k__BackingField: {fileID: 1319975413407364198}
+  <HealthBar>k__BackingField: {fileID: 7703315758721163811}
 --- !u!4 &6287673965971833129
 Transform:
   m_ObjectHideFlags: 0
@@ -11357,6 +11393,18 @@ Transform:
   - {fileID: 9048717841560478916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7703315758721163811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4076041710329624588, guid: 6254c50dde4bac14cb16c67b6caf9654,
+    type: 3}
+  m_PrefabInstance: {fileID: 1297082537413642431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &8731940726913429118
 NavMeshAgent:
   m_ObjectHideFlags: 0

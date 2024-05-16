@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class EnemyStateMachine : StateMachine
 {
@@ -20,6 +21,10 @@ public class EnemyStateMachine : StateMachine
 
     [field: SerializeField]
     public ForceReceiver ForceReceiver { get; private set; }
+
+    [field: SerializeField]
+    public Image HealthBar { get; private set; }
+
 
     private void Start()
     {

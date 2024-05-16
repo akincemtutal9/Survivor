@@ -6,7 +6,8 @@ public class EnemyTakeDamageState : EnemyBaseState
 
     public override void Enter()
     {
-      stateMachine.ForceReceiver.AddForce(stateMachine.transform.forward * -1);
+        stateMachine.ForceReceiver.AddForce(stateMachine.transform.forward * -1);
+        stateMachine.HealthBar.fillAmount = (float)stateMachine.Health.health / stateMachine.Health.maxHealth;
     }
     public override void Tick(float deltaTime)
     {

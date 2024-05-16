@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    protected int maxHealth;
-    protected int health;
-    protected bool isInvunerable;
+    public int maxHealth;
+    public int health;
+    public bool isInvunerable;
 
     public event Action OnTakeDamage;
     public event Action OnDie;
