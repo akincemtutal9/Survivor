@@ -21,8 +21,6 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField]
     public ForceReceiver ForceReceiver { get; private set; }
 
-
-
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag(nameof(Player)).GetComponent<PlayerHealth>();
@@ -42,15 +40,16 @@ public class EnemyStateMachine : StateMachine
         Health.OnDie -= HandleDie;
         Health.OnTakeDamage -= HandleTakeDamage;
     }
-
     private void HandleDie()
     {
-        //SwitchState(new EnemyDieState(this));
+        SwitchState(new EnemyDieState(this));
     }
-
     private void HandleTakeDamage()
     {
-        //SwitchState(new EnemyTakeDamageState(this));
+        SwitchState(new EnemyTakeDamageState(this));
     }
-
+    public void DestroyEnemyObject()
+    {
+        Destroy(gameObject);
+    }
 }
