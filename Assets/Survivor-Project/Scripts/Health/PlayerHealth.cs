@@ -1,9 +1,14 @@
 using UnityEngine;
 using System.Threading.Tasks;
+using TMPro;
+using UnityEngine.UI;
 public class PlayerHealth : Health
 {
-
     [SerializeField] protected PlayerSO playerSO;
+    [SerializeField] private Image healthBar;
+    [SerializeField] private TMP_Text healthText;
+    
+
     [SerializeField] private Material playerDamagedMaterial;
     private Material playerMat;
     private MeshRenderer playermeshRenderer;
@@ -20,6 +25,8 @@ public class PlayerHealth : Health
     {
         OnTakeDamage += HandleTakeDamage;
         OnDie += HandleDie;
+
+        UpdatePlayerHealthDisplay();
     }
     private void OnDestroy()
     {
@@ -30,17 +37,24 @@ public class PlayerHealth : Health
     {
         Debug.Log("Take Damage");
         MakeMaterialRed();
+        UpdatePlayerHealthDisplay();
     }
     private void HandleDie()
     {
         Debug.Log("Die");
         //GameManager.EndGame();
     }
-    private async void MakeMaterialRed()
+    private async void MakeMaterialRed() // Call this function whenever the player takes damage
     {
         playermeshRenderer.material = playerDamagedMaterial;
         await Task.Delay(100);
         playermeshRenderer.material = playerMat;
+    }
+
+    private void UpdatePlayerHealthDisplay() // Call this function whenever the player takes damage or heals AND on Start
+    {
+        healthBar.fillAmount = (float)health / maxHealth;
+        healthText.text = $"{health}/{maxHealth}";
     }
 }
  
