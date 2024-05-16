@@ -1,12 +1,29 @@
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class Damage : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] private SkillData skillData;
+    private bool canDamage = true;
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (canDamage)
         {
-            collision.gameObject.GetComponent<EnemyHealth>().DealDamage(10);
+            var objs = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (var obj in objs)
+            {
+                obj.GetComponent<EnemyHealth>().DealDamage(skillData.damage);
+            }
+            canDamage = false;
+            ResetCooldown();
         }
     }
+
+    private async void ResetCooldown()
+    {   
+        await Task.Delay((int)skillData.skillCooldown * 1000);
+        canDamage = true;
+    }
+    
 }

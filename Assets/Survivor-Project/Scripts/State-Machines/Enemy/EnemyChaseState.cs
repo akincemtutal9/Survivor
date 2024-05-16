@@ -12,8 +12,11 @@ public class EnemyChaseState : EnemyBaseState
 
     public override void Exit()
     {
-        stateMachine.Agent.ResetPath();
-        stateMachine.Agent.velocity = Vector3.zero;
+        if (stateMachine.Agent.isActiveAndEnabled && stateMachine.Agent.isOnNavMesh)
+        {
+            stateMachine.Agent.ResetPath();
+            stateMachine.Agent.velocity = Vector3.zero;
+        }
     }
 
     public override void Tick(float deltaTime)

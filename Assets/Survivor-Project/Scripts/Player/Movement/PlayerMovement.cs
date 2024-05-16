@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             rb.MovePosition(rb.position + moveDirection * playerSO.moveSpeed * Time.deltaTime);
-        }
-
+        }                
     }
 }
