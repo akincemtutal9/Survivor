@@ -42,7 +42,6 @@ public class PlayerHealth : Health
     private void HandleDie()
     {
         Debug.Log("Die");
-        //GameManager.EndGame();
     }
     private async void MakeMaterialRed() // Call this function whenever the player takes damage
     {
