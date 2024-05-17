@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a34b3f17989b14389791876326b917, type: 3}
-  m_Name: Iceball
+  m_Name: Bomb
   m_EditorClassIdentifier: 
-  skillName: Ice
-  skillCooldown: 3
-  damage: 10
-  speed: 10
+  skillName: Bomb
+  skillCooldown: 7
+  damage: 30
+  speed: 3

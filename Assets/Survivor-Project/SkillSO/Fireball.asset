@@ -15,3 +15,4 @@ MonoBehaviour:
   skillName: Fire
   skillCooldown: 5
   damage: 20
+  speed: 10

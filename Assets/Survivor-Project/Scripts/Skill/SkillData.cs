@@ -6,4 +6,5 @@ public class SkillData : ScriptableObject
     public string skillName;
     public float skillCooldown;
     public int damage;
+    public int speed;
 }

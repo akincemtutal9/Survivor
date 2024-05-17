@@ -6,7 +6,6 @@ public class Damage : MonoBehaviour
 {
     [SerializeField] private List<Skill> availableSkills; // Skill prefabs list
     private Dictionary<Skill, bool> skillCooldowns = new Dictionary<Skill, bool>();
-
     private void Start()
     {
         // Initialize the cooldown dictionary for each skill in the availableSkills list
@@ -15,7 +14,6 @@ public class Damage : MonoBehaviour
             skillCooldowns[skill] = true;
         }
     }
-
     private void Update()
     {
         // Example of casting different skills from the availableSkills list
@@ -27,7 +25,6 @@ public class Damage : MonoBehaviour
             }
         }
     }
-
     public void AddSkill(Skill skillPrefab)
     {
         if (!availableSkills.Contains(skillPrefab))
@@ -36,7 +33,6 @@ public class Damage : MonoBehaviour
             skillCooldowns[skillPrefab] = true;
         }
     }
-
     private void CastSkill<T>(T skillPrefab) where T : Skill
     {
         Instantiate(skillPrefab, transform.position, transform.rotation);
