@@ -8904,7 +8904,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9848b038ade1e54285373b95006b4d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 7094735e85de4274baf54248e47ce7fa, type: 2}
+  fireballPrefab: {fileID: 6662053218876016143, guid: dcac471b15f1c91409f1518619f472af,
+    type: 3}
+  iceballPrefab: {fileID: 3403220474087814247, guid: e41f33cbdc1282e45b930e7d74bc90d4,
+    type: 3}
 --- !u!1 &1602142435
 GameObject:
   m_ObjectHideFlags: 0
