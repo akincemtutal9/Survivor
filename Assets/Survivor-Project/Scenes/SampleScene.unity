@@ -9867,6 +9867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   availableSkills: []
+  animator: {fileID: 1495864996932191683}
 --- !u!114 &1596053075
 MonoBehaviour:
   m_ObjectHideFlags: 0

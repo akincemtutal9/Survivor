@@ -38,7 +38,6 @@ public class PlayerHealth : Health
     private void HandleTakeDamage()
     {
         Debug.Log("Take Damage");
-        MakeMaterialRed();
         UpdatePlayerHealthDisplay();
         HandleGetHitAnimation();
     }
@@ -46,19 +45,11 @@ public class PlayerHealth : Health
     {
         Debug.Log("Die");
     }
-    private async void MakeMaterialRed() // Call this function whenever the player takes damage
-    {
-        playermeshRenderer.material = playerDamagedMaterial;
-        await Task.Delay(100);
-        playermeshRenderer.material = playerMat;
-    }
-
     private void UpdatePlayerHealthDisplay() // Call this function whenever the player takes damage or heals AND on Start
     {
         healthBar.fillAmount = (float)health / maxHealth;
         healthText.text = $"{health}/{maxHealth}";
     }
-    
     private void HandleGetHitAnimation()
     {
         animator.SetTrigger(GetHitHash);

@@ -4,7 +4,10 @@ using System.Threading.Tasks;
 
 public class Damage : MonoBehaviour
 {
+    private readonly int CastSkillHash = Animator.StringToHash("CastSkill");
+
     [SerializeField] private List<Skill> availableSkills; // Skill prefabs list
+    [SerializeField] private Animator animator;
     private Dictionary<Skill, bool> skillCooldowns = new Dictionary<Skill, bool>();
     private void Start()
     {
@@ -35,14 +38,18 @@ public class Damage : MonoBehaviour
     }
     private void CastSkill<T>(T skillPrefab) where T : Skill
     {
+        HandleCastSkillAnimation();
         Instantiate(skillPrefab, transform.position, transform.rotation);
         skillCooldowns[skillPrefab] = false;
         ResetCooldown(skillPrefab);
     }
-
     private async void ResetCooldown<T>(T skill) where T : Skill
     {
         await Task.Delay((int)skill.skillData.skillCooldown * 1000);
         skillCooldowns[skill] = true;
+    }
+    private void HandleCastSkillAnimation()
+    {
+        animator.SetTrigger(CastSkillHash);
     }
 }
