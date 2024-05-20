@@ -4,10 +4,12 @@ using TMPro;
 using UnityEngine.UI;
 public class PlayerHealth : Health
 {
+    private readonly int GetHitHash = Animator.StringToHash("GetHit");
+
     [SerializeField] protected PlayerSO playerSO;
     [SerializeField] private Image healthBar;
     [SerializeField] private TMP_Text healthText;
-    
+    [SerializeField] private Animator animator;
 
     [SerializeField] private Material playerDamagedMaterial;
     private Material playerMat;
@@ -38,6 +40,7 @@ public class PlayerHealth : Health
         Debug.Log("Take Damage");
         MakeMaterialRed();
         UpdatePlayerHealthDisplay();
+        HandleGetHitAnimation();
     }
     private void HandleDie()
     {
@@ -55,5 +58,11 @@ public class PlayerHealth : Health
         healthBar.fillAmount = (float)health / maxHealth;
         healthText.text = $"{health}/{maxHealth}";
     }
+    
+    private void HandleGetHitAnimation()
+    {
+        animator.SetTrigger(GetHitHash);
+    }
+    
 }
  
