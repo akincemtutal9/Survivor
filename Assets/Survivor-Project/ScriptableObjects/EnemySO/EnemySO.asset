@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a34b3f17989b14389791876326b917, type: 3}
-  m_Name: Bomb
+  m_Script: {fileID: 11500000, guid: 067bca828c7fe084f8f5646ee23b65b3, type: 3}
+  m_Name: EnemySO
   m_EditorClassIdentifier: 
-  skillName: Bomb
-  skillCooldown: 7
-  damage: 30
-  speed: 3
+  health: 120
+  maxHealth: 120
+  damage: 2
+  moveSpeed: 2
+  attackRange: 1.5
+  attackCooldown: 1

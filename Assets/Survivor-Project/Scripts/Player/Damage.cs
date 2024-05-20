@@ -50,6 +50,7 @@ public class Damage : MonoBehaviour
     }
     private void HandleCastSkillAnimation()
     {
+        animator.ResetTrigger(CastSkillHash);
         animator.SetTrigger(CastSkillHash);
     }
 }

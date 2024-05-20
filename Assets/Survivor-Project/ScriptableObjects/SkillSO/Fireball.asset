@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   skillName: Fire
-  skillCooldown: 5
-  damage: 20
-  speed: 10
+  skillCooldown: 3
+  damage: 5
+  speed: 20
+  skillType: 1

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Missile
+  - Skill
   layers:
   - Default
   - TransparentFX
@@ -12,8 +14,8 @@ TagManager:
   - Enemy
   - Water
   - UI
-  - 
-  - 
+  - Skill
+  - Player
   - 
   - 
   - 

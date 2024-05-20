@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8393027496542577746}
   - component: {fileID: -4140290296358755689}
   - component: {fileID: -5288475599670697841}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6b38742730e330c488cc8d7964788813, type: 2}
+  - {fileID: 2100000, guid: bce32739db90b6843ac7f0179bcaa6b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: c2432e2628b460d4281c94388efd9db2, type: 2}
+  explosionEffect: {fileID: 180702, guid: a7c694f0877ea874fa57e033221095c3, type: 3}

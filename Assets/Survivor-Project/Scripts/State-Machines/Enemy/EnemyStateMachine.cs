@@ -25,6 +25,10 @@ public class EnemyStateMachine : StateMachine
     [field: SerializeField]
     public Image HealthBar { get; private set; }
 
+    [field: SerializeField]
+
+    public GameObject DieParticle { get; private set; }
+
 
     private void Start()
     {
@@ -48,6 +52,7 @@ public class EnemyStateMachine : StateMachine
     private void HandleDie()
     {
         SwitchState(new EnemyDieState(this));
+        Instantiate(DieParticle, transform.position, Quaternion.identity);
     }
     private void HandleTakeDamage()
     {
