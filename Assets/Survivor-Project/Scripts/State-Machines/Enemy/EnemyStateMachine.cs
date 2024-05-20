@@ -52,7 +52,8 @@ public class EnemyStateMachine : StateMachine
     private void HandleDie()
     {
         SwitchState(new EnemyDieState(this));
-        Instantiate(DieParticle, transform.position, Quaternion.identity);
+        GameObject particle = Instantiate(DieParticle, transform.position, Quaternion.identity);
+        Destroy(particle, 1);
     }
     private void HandleTakeDamage()
     {
