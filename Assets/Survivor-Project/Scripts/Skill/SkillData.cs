@@ -14,6 +14,7 @@ public class SkillData : ScriptableObject
     {
         Bomb,
         Missile,
-        Heal
+        Heal,
+        Swing
     }
 }

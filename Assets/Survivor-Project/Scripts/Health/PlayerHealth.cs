@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine.UI;
 public class PlayerHealth : Health
@@ -10,18 +9,11 @@ public class PlayerHealth : Health
     [SerializeField] private Image healthBar;
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Animator animator;
-
-    [SerializeField] private Material playerDamagedMaterial;
-    private Material playerMat;
-    private MeshRenderer playermeshRenderer;
-
     private void Awake()
     {
         health = playerSO.health;
         maxHealth = playerSO.maxHealth;
         health = maxHealth;
-        playerMat = GetComponent<MeshRenderer>().material;
-        playermeshRenderer = GetComponent<MeshRenderer>();
     }
     private void Start()
     {
