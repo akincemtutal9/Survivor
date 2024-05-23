@@ -132,7 +132,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-5288475599670697841
 MonoBehaviour:
@@ -147,4 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: c2432e2628b460d4281c94388efd9db2, type: 2}
+  rigidbody: {fileID: -4140290296358755689}
   explosionEffect: {fileID: 180702, guid: a7c694f0877ea874fa57e033221095c3, type: 3}

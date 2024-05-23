@@ -1,21 +1,18 @@
 using UnityEngine;
-using static SkillData;
 
 public abstract class Skill : MonoBehaviour
 {
     public SkillData skillData;
+    public new Rigidbody rigidbody;
     private IMovementStrategy movementStrategy;
-
-    public void SetMovementStrategy(IMovementStrategy strategy)
-    {
-        movementStrategy = strategy;
-    }
+    protected abstract IMovementStrategy GetMovementStrategy();
     private void OnEnable()
     {
         Destroy(gameObject, 2);
     }
-    protected virtual void Update() 
+    protected virtual void Start()
     {
-        movementStrategy?.Move(transform,skillData.speed);
+        movementStrategy = GetMovementStrategy();
+        movementStrategy?.Move(rigidbody, transform, skillData.speed);
     }
 }

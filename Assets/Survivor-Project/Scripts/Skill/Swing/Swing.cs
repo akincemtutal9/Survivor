@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Swing : MonoBehaviour
+public class Swing : Skill
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override IMovementStrategy GetMovementStrategy()
     {
-        
+        return new SwingMovement();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            other.GetComponent<EnemyHealth>().DealDamage(10);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

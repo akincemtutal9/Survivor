@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class Projectile : Skill
 {
-    private void Start()
+    protected override IMovementStrategy GetMovementStrategy()
     {
-        SetMovementStrategy(new ProjectileMovement());
+        return new ProjectileMovement();
     }
     public void OnTriggerEnter(Collider other)
     {

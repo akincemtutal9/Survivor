@@ -13,7 +13,7 @@ public class SkillData : ScriptableObject
     public enum SkillType
     {
         Bomb,
-        Missile,
+        Projectile,
         Heal,
         Swing
     }

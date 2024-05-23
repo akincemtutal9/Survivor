@@ -3,9 +3,9 @@ using UnityEngine;
 public class Bomb : Skill
 {
     [SerializeField] private GameObject explosionEffect;
-    private void Start()
+    protected override IMovementStrategy GetMovementStrategy()
     {
-        SetMovementStrategy(new BombMovement());
+        return new BombMovement();
     }
     public void OnCollisionEnter(Collision collision)
     {
