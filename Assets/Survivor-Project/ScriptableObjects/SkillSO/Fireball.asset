@@ -15,5 +15,6 @@ MonoBehaviour:
   skillName: Fire
   skillCooldown: 3
   damage: 5
-  speed: 20
+  speed: 30
+  lifeTime: 1
   skillType: 1

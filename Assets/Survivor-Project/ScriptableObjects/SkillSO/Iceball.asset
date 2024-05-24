@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Iceball
   m_EditorClassIdentifier: 
   skillName: Ice
-  skillCooldown: 1
+  skillCooldown: 2
   damage: 3
-  speed: 20
+  speed: 30
+  lifeTime: 1
   skillType: 1

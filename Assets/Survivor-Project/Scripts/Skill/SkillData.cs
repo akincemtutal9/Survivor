@@ -4,9 +4,11 @@ using UnityEngine;
 public class SkillData : ScriptableObject
 {
     public string skillName;
+    public string skillDescription;
     public float skillCooldown;
     public int damage;
     public int speed;
+    public float lifeTime;
     public SkillType skillType;
 
 
@@ -14,7 +16,6 @@ public class SkillData : ScriptableObject
     {
         Bomb,
         Projectile,
-        Heal,
-        Swing
+        Spin
     }
 }

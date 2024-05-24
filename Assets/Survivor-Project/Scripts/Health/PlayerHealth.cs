@@ -47,5 +47,17 @@ public class PlayerHealth : Health
         animator.SetTrigger(GetHitHash);
     }
     
+    public void HealPlayer(int amount)
+    {
+        if(health + amount > maxHealth)
+        {
+            health = maxHealth;
+        }
+        else
+        {
+            health += amount;
+        }
+        UpdatePlayerHealthDisplay();
+    }
 }
  

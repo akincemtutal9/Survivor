@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public abstract class Skill : MonoBehaviour
 {
     public SkillData skillData;
@@ -8,7 +7,7 @@ public abstract class Skill : MonoBehaviour
     protected abstract IMovementStrategy GetMovementStrategy();
     private void OnEnable()
     {
-        Destroy(gameObject, 2);
+        Destroy(gameObject, skillData.lifeTime);
     }
     protected virtual void Start()
     {

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bomb : Skill
 {
     [SerializeField] private GameObject explosionEffect;
-    protected override IMovementStrategy GetMovementStrategy()
+    protected override IMovementStrategy GetMovementStrategy() 
     {
         return new BombMovement();
     }
