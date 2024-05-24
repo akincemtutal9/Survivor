@@ -4,6 +4,7 @@
 
     public override void Enter()
     {
+        stateMachine.DropExperiencePoints();
         stateMachine.DestroyEnemyObject();
     }
     public override void Tick(float deltaTime)

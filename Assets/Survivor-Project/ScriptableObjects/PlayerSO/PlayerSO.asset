@@ -16,3 +16,4 @@ MonoBehaviour:
   maxHealth: 50
   damage: 100
   moveSpeed: 5
+  collectibleArea: 1

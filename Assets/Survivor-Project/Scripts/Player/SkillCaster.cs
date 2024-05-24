@@ -38,14 +38,14 @@ public class SkillCaster : MonoBehaviour
         }
     }
     private void CastSkill<T>(T skillPrefab) where T : Skill
-    {
-        HandleCastSkillAnimation();
+    {   
         if(skillPrefab.skillData.skillType == SkillType.Spin)
         {
             Instantiate(skillPrefab, transform.position, transform.rotation, transform);
         }
         else
         {
+            HandleCastSkillAnimation();
             Instantiate(skillPrefab, transform.position, transform.rotation);
         }
         skillCooldowns[skillPrefab] = false;

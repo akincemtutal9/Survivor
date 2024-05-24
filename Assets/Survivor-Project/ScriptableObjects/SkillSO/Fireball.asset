@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a34b3f17989b14389791876326b917, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  skillName: Fire
+  skillName: Yellow Energy Ball
+  skillDescription: Throws an Yellow Energy Ball to the enemies
   skillCooldown: 3
   damage: 5
   speed: 30

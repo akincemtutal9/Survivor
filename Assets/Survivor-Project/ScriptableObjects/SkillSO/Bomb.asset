@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Bomb
   m_EditorClassIdentifier: 
   skillName: Bomb
+  skillDescription: Throws a bomb to enemies that will explode
   skillCooldown: 7
   damage: 15
   speed: 5

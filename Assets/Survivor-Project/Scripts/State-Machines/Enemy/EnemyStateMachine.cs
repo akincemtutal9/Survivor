@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -26,9 +27,10 @@ public class EnemyStateMachine : StateMachine
     public Image HealthBar { get; private set; }
 
     [field: SerializeField]
-
     public GameObject DieParticle { get; private set; }
 
+    [field: SerializeField]
+    public GameObject ExperiencePointPrefab { get; private set; }
 
     private void Start()
     {
@@ -62,5 +64,10 @@ public class EnemyStateMachine : StateMachine
     public void DestroyEnemyObject()
     {
         Destroy(gameObject);
+    }
+
+    public void DropExperiencePoints()
+    {
+        GameObject experiencePoint = Instantiate(ExperiencePointPrefab, transform.position, Quaternion.identity);
     }
 }

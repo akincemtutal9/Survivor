@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a34b3f17989b14389791876326b917, type: 3}
-  m_Name: Wave
+  m_Name: Spin
   m_EditorClassIdentifier: 
   skillName: Wave
+  skillDescription: Turns an imaginary sword around itself
   skillCooldown: 2
   damage: 5
   speed: 1
   lifeTime: 1
-  skillType: 3
+  skillType: 2

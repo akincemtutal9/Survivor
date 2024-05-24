@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a34b3f17989b14389791876326b917, type: 3}
   m_Name: Iceball
   m_EditorClassIdentifier: 
-  skillName: Ice
+  skillName: Blue Energy Ball
+  skillDescription: Throws an Blue Energy Ball to the enemies
   skillCooldown: 2
   damage: 3
   speed: 30

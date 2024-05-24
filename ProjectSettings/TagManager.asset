@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Missile
   - Skill
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - Skill
   - Player
-  - 
+  - Collectible
   - 
   - 
   - 
