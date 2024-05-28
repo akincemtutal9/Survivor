@@ -2,11 +2,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int experiencePoints { get; private set; }
-
-
-
     public static GameManager Instance { get; private set; }
+
+    public PlayerLevel playerLevel;
     private void Awake()
     {
         if (Instance == null)
@@ -18,10 +16,4 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    public void AddExperiencePoints(int amount)
-    {
-        experiencePoints += amount;
-    }
-
 }

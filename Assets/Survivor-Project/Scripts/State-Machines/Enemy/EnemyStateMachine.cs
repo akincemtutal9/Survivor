@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -69,5 +68,6 @@ public class EnemyStateMachine : StateMachine
     public void DropExperiencePoints()
     {
         GameObject experiencePoint = Instantiate(ExperiencePointPrefab, transform.position, Quaternion.identity);
+        experiencePoint.GetComponent<ExperiencePoints>().experiencePoints = EnemyData.experiencePoints;
     }
 }
