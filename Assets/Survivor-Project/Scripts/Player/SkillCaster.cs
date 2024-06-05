@@ -20,6 +20,10 @@ public class SkillCaster : MonoBehaviour
     }
     private void Update()
     {
+        if(GameStates.isGamePaused)
+        {
+            return;
+        }
         // Example of casting different skills from the availableSkills list
         foreach (var skill in availableSkills)
         {

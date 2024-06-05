@@ -8,16 +8,18 @@ public class PlayerLevel : MonoBehaviour
     private int xpToNextLevel = 4;
     [SerializeField] private TMP_Text levelText;
     [SerializeField] private Slider xpSlider;
+    [SerializeField] private Canvas skillCanvas;
 
     private void Start()
     {
-        UpdateUI();
+        UpdateLevelUI();
+        //skillCanvas.gameObject.SetActive(false); // Sahnede kapatýver baþýmýz aðrýmasýn :D
     }
     public void GainXP(int amount)
     {
         currentXP += amount;
         CheckLevelUp();
-        UpdateUI();
+        UpdateLevelUI();
     }
     private void CheckLevelUp()
     {
@@ -38,9 +40,10 @@ public class PlayerLevel : MonoBehaviour
     private void OnLevelUp()
     {
         Debug.Log("Level Up! Current Level: " + currentLevel);
+        GameManager.Instance.PauseGame();
     }
 
-    private void UpdateUI()
+    private void UpdateLevelUI()
     {
         if (levelText != null)
             levelText.text = "Level: " + currentLevel;
