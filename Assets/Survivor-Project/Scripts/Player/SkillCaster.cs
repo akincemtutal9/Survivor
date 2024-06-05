@@ -20,7 +20,7 @@ public class SkillCaster : MonoBehaviour
     }
     private void Update()
     {
-        if(GameStates.isGamePaused)
+        if(GameStates.gameState.Equals(GameStates.GameState.Pause))
         {
             return;
         }

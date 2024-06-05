@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public PlayerLevel playerLevel;
     public SkillCaster skillCaster;
+
+    [Header("Skill Cards")]
+    public List<Card> cards = new List<Card>();
 
     [Header("Game UI's")]
     public Canvas skillCanvas;

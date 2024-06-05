@@ -1,25 +1,31 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SkillCanvas : MonoBehaviour
 {
-    [SerializeField] private List<Card> cards = new List<Card>();
-    private List<Card> skillCards = new List<Card>();
+    private List<Card> skillCards = new List<Card>(); // 3 cards to be displayed on the skill canvas
     private void OnEnable()
     {
         AddRandomSkillCardsToSkillCanvas();
     }
     private void OnDisable()
     {
-        cards.Clear();
+        skillCards.Clear();
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
     }
     private void AddRandomSkillCardsToSkillCanvas() { 
-        var randomSkillCard = cards[Random.Range(0, cards.Count)];
-        for(int i = 0; i < 3; i++)
+        var randomSkillCard = GameManager.Instance.cards[Random.Range(0, GameManager.Instance.cards.Count)];
+        for (int i = 0; i < 3; i++)
         {
+            // if card already exists, get another random card
+            while (skillCards.Contains(randomSkillCard))
+            {
+                randomSkillCard = GameManager.Instance.cards[Random.Range(0, GameManager.Instance.cards.Count)];
+            }
             skillCards.Add(randomSkillCard);
-            randomSkillCard = cards[Random.Range(0, cards.Count)];
         }
         for(int j=0; j < 3; j++)
         {
