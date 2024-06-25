@@ -17,5 +17,5 @@ MonoBehaviour:
   skillCooldown: 2
   damage: 5
   speed: 1
-  lifeTime: 1
+  lifeTime: 0.2
   skillType: 2

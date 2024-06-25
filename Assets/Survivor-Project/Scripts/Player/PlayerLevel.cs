@@ -7,7 +7,7 @@ public class PlayerLevel : MonoBehaviour
     private int currentXP = 0;
     private int xpToNextLevel = 4;
     [SerializeField] private TMP_Text levelText;
-    [SerializeField] private Slider xpSlider;
+    [SerializeField] private Image xpFillImage;
     [SerializeField] private Canvas skillCanvas;
 
     private void Start()
@@ -47,10 +47,9 @@ public class PlayerLevel : MonoBehaviour
     {
         if (levelText != null)
             levelText.text = "Level: " + currentLevel;
-        if (xpSlider != null)
+        if (xpFillImage != null)
         {
-            xpSlider.maxValue = xpToNextLevel;
-            xpSlider.value = currentXP;
+            xpFillImage.fillAmount = (float)currentXP / xpToNextLevel;
         }
     }
 }
